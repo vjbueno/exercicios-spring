@@ -39,9 +39,10 @@ public class Postagem {
 	// atributo DATE da classe POSTAGEM
 	private Date date = new java.sql.Date(System.currentTimeMillis());
 
-	private Tema tema;
+	
 	@ManyToOne
 	@JsonIgnoreProperties("postagem")
+	private Tema tema;
 
 	// getters e setters da classe POSTAGEM
 	public long getId() {

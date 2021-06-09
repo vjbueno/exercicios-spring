@@ -19,8 +19,8 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 public class Tema {
 
 	
-	@Id
-	@GeneratedValue (strategy = GenerationType.IDENTITY)
+	@Id // anotação serve para informar que o atributo ID é uma PK no BD.  
+	@GeneratedValue (strategy = GenerationType.IDENTITY) //"estratégia" para gerar id automaticamente
 	//atributo ID da classe TEMA:
 	private long id;
 	

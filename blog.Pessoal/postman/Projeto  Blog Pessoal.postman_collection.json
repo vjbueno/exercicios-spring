@@ -1,0 +1,457 @@
+{
+	"info": {
+		"_postman_id": "89997706-d150-4c07-b6d4-0d61e9dde35d",
+		"name": "Projeto  Blog Pessoal",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "MÉTODO GET",
+			"item": [
+				{
+					"name": "POSTAGEM",
+					"item": [
+						{
+							"name": "Ver todos os posts",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Basic amVyb25pbW9idWVubzoxMjM0NTY=",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8090/postagens/todospost",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8090",
+									"path": [
+										"postagens",
+										"todospost"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Visualiza post por id",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Basic amVyb25pbW9idWVubzoxMjM0NTY=",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8090/postagens/id/3",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8090",
+									"path": [
+										"postagens",
+										"id",
+										"3"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Visualiza post pelo título",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Basic amVyb25pbW9idWVubzoxMjM0NTY=",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8090/postagens/titulo/top",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8090",
+									"path": [
+										"postagens",
+										"titulo",
+										"top"
+									],
+									"query": [
+										{
+											"key": "",
+											"value": null,
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "TEMA",
+					"item": [
+						{
+							"name": "Visualiza todos os temas",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Basic amVyb25pbW9idWVubzoxMjM0NTY=",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8090/tema",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8090",
+									"path": [
+										"tema"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "USUARIO",
+					"item": [
+						{
+							"name": "Busca por todos os usúarios",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Basic amVyb25pbW9idWVubzoxMjM0NTY=",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8090/usuarios/todos",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8090",
+									"path": [
+										"usuarios",
+										"todos"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "MÉTODO POST",
+			"item": [
+				{
+					"name": "Usuario",
+					"item": [
+						{
+							"name": "Cadastra usúario",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"nomeUsuario\" : \"Buzinho teste\",\r\n    \"usuario\" : \"vjbueno\",\r\n    \"senha\" : \"321654\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8090/usuarios/cadastrar",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8090",
+									"path": [
+										"usuarios",
+										"cadastrar"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Loga no blog",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"usuario\" : \"vjbueno\",\r\n    \"senha\" : \"321654\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8090/usuarios/logar",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8090",
+									"path": [
+										"usuarios",
+										"logar"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Tema",
+					"item": [
+						{
+							"name": "Posta um tema",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Basic amVyb25pbW9idWVubzoxMjM0NTY=",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"descricao\" : \"este é o tema\"\r\n\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8090/tema",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8090",
+									"path": [
+										"tema"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Postagem",
+					"item": [
+						{
+							"name": "Publica post",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Basic amVyb25pbW9idWVubzoxMjM0NTY=",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"titulo\" : \"aqui é o titulo da minha postagem que vai estar lligada a descrição tema\",\r\n    \"texto\" : \"texto uqe vai para meu tema\",\r\n    \"tema\" :{\r\n        \"id\" :4\r\n    }\r\n   \r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8090/postagens/incluipost",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8090",
+									"path": [
+										"postagens",
+										"incluipost"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "MÉTODO PUT",
+			"item": [
+				{
+					"name": "Atualiza post pelo nº de id post",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Basic amVyb25pbW9idWVubzoxMjM0NTY=",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"id\": 1,\r\n\"titulo\": \"Postagem que será atualizada\",\r\n\"texto\": \"Atualize essa postagem para realizarmos mais um teste. Estou acrescentando este texto.\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8090/postagens/atualizardadospost/id/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"postagens",
+								"atualizardadospost",
+								"id",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "MÉTODO DELETE",
+			"item": [
+				{
+					"name": "Deleta post pelo nº de id post",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Basic amVyb25pbW9idWVubzoxMjM0NTY=",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8090/postagens/id/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"postagens",
+								"id",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

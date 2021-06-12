@@ -28,6 +28,21 @@ public class Usuario {
 	@NotNull
 	@Size(min = 05, max = 100)
 	private String senha;
+	
+	// para utilizar nos testes
+	public Usuario() {
+		
+	}
+
+	// Construtores para utilizar nos testes
+	public Usuario(long idUsuario, @NotNull @Size(min = 2, max = 100) String nomeUsuario,
+			@NotNull @Size(min = 5, max = 100) String usuario, @NotNull @Size(min = 5, max = 100) String senha) {
+		super();
+		this.idUsuario = idUsuario;
+		this.nomeUsuario = nomeUsuario;
+		this.usuario = usuario;
+		this.senha = senha;
+	}
 
 	public long getIdUsuario() {
 		return idUsuario;

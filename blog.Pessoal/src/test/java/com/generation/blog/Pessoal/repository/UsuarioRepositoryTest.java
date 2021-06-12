@@ -1,7 +1,7 @@
 package com.generation.blog.Pessoal.repository;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.*;
+
 
 import java.util.List;
 
@@ -29,15 +29,15 @@ class UsuarioRepositoryTest {
 	//incluindo usuarios no bd para testar a situação antes de realizar os demais testes 
 	@BeforeAll
 	void start() {
-		Usuario usuario = new Usuario(1,"Dalva Jeronimo","vdalva","789456");
+		Usuario usuario = new Usuario(1,"Dalva Vital","vdalva","789456");
 		if(repository.findByUsuario(usuario.getUsuario())!=null)
 			repository.save(usuario);
 		
-		usuario = new Usuario(2,"Jose Jeronimo","jjeronimo","123456");
+		usuario = new Usuario(2,"Dalva Jeronimo","jjeronimo","123456");
 		if(repository.findByUsuario(usuario.getUsuario())!=null)
 			repository.save(usuario);
 		
-		usuario = new Usuario(3,"Talita Souza","talinhas","123456");
+		usuario = new Usuario(3,"Dalva Souza","talinhas","123456");
 		if(repository.findByUsuario(usuario.getUsuario())!=null)
 			repository.save(usuario);
 		
@@ -54,9 +54,9 @@ class UsuarioRepositoryTest {
 	
 	//Teste retorna apenas dois usuários cadastrados no bd que tenham "Jerônimo" em seus nomes
 	@Test
-	public void findAllByUsuarioContainingIgnoreCaseRetornaDoisUsuarios() {
-		List<Usuario> listaDeUsuarios = repository.findByUsuarioContainingIgnoreCase("Jeronimo");
-		assertEquals(2,listaDeUsuarios.size());
+	public void findAllByUsuarioContainingIgnoreCaseTresUsuario() {
+		List<Usuario> listaDeUsuarios = repository.findAllByUsuarioContainingIgnoreCase("Dalva");
+		assertEquals(3, listaDeUsuarios.size());
 	}
 	
 	//Deleta do banco os usuários criados após e execução dos dois testes anteriores 
